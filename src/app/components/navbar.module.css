@@ -1,0 +1,22 @@
+.container {
+  padding: 0 20rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #A31D1D;
+  color: white;
+  align-items: center;
+}
+
+.menuList {
+  display: flex;
+}
+
+.menuButton {
+  padding: 3rem 1rem;
+  height: 100%;
+  font-weight: 500;
+}
+
+.menuButton:hover {
+  cursor: pointer;
+}
