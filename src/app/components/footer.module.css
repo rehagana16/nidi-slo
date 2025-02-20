@@ -1,0 +1,23 @@
+.container {
+  padding: 10rem 20rem;
+  display: flex;
+  background-color: #A31D1D;
+  color: white;
+  align-items: flex-start;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.column {
+ display: flex;
+ flex-direction: column; 
+ width: 100%;
+ align-items: flex-start;
+ height: 100%;
+}
+
+.header {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
