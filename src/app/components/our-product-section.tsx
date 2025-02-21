@@ -1,6 +1,7 @@
 import styles from './our-product-section.module.css';
 import baseStyle from './base-section-style.module.css';
 import mergeStrings from '@/util/mergeClassname';
+import { ProductCard } from './product-card';
 
 // TODO: 
 // 1. Create definition of nidi and slo with image example
@@ -35,6 +36,16 @@ export const OurProductSection = () => {
             Kami melayani permintaan penerbitan NIDI dan SLO pada wilayah Sumatera Utara.
           </div>
         </div>
+      </div>
+      <div className={styles.productCardContainer}>
+        <ProductCard
+          imageUrl='/card-nidi-logo.png'
+          title='Nomor Identitas Instalasi Listrik'
+        />
+        <ProductCard
+          imageUrl='/card-slo-logo.png'
+          title='Sertifikat Laik Operasi'
+        />
       </div>
     </div>
   )
