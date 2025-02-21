@@ -1,0 +1,34 @@
+.contentSection {
+  display: flex;
+  padding: 5rem;
+  max-width: 1200px;
+}
+
+.leftContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 50%;
+}
+
+.text {
+  text-align: justify;
+}
+
+.boldText {
+  font-weight: 700;
+}
+
+/* Red box for temporary image placeholder */
+.imageContainer {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
