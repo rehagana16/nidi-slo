@@ -1,0 +1,13 @@
+.buttonContainer {
+  outline: none;
+  border: none;
+  background-color: #6b1919;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: 700;
+}
+
+.buttonContainer:hover {
+  cursor: pointer;
+}

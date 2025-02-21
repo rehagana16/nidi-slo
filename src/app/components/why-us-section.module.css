@@ -1,0 +1,16 @@
+.redBackground.redBackground {
+  background-color: #6b1919;
+}
+
+.whiteText.whiteText {
+  color: white;
+}
+
+.whiteBackground.whiteBackground {
+  background-color: white;
+}
+
+.cardSection {
+  display: flex;
+  gap: 32px;
+}

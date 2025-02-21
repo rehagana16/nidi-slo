@@ -1,0 +1,36 @@
+.cardContainer {
+  padding: 3rem 1.5rem;
+  border-radius: 16px;
+  width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  background-color: white;
+  margin-top: 55px
+}
+
+.imageContainer {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: -45px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  color: #000000;
+  font-size: 1.6rem;
+}
+
+.content {
+  text-align: center;
+  font-size: 1.2rem;
+}
