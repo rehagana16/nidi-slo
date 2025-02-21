@@ -1,5 +1,7 @@
 import { HeroSection } from "./components/hero-section";
+import { OurProductSection } from "./components/our-product-section";
 import { SupportedSection } from "./components/supported-section";
+import { WhyUsSection } from "./components/why-us-section";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <div>
       <HeroSection />
       <SupportedSection />
+      <OurProductSection />
+      <WhyUsSection />
     </div>
   );
 }
