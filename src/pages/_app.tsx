@@ -2,6 +2,12 @@ import type { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import './global.css';
+import { Montserrat } from 'next/font/google'
+ 
+const montserrat = Montserrat({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+})
 
  
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -18,7 +24,9 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
  
   return (
     <>
-      {getLayout(<Component {...pageProps} />)}
+      <main className={montserrat.className}>
+        {getLayout(<Component {...pageProps} />)}
+      </main>
     </>
   )
 }

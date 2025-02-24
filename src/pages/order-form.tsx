@@ -33,19 +33,88 @@ const OrderForm: NextPageWithLayout = () => {
   return(
     <div className={styles.container}>
       <div className={styles.title}>Formulir Permohonan</div>
-      <div>
+      <div style={{width: '100%'}}>
         <form
           onSubmit={handleSubmit((data) => {
             console.log(data);
           })}
           className={styles.formContainer}
         >
-          <label>Nama Pemohon(mis: Nama pribadi, instansi, perusahaan atau sekolah)</label>
-          <input {...register("name", { required: true })} />
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Nama Pemohon(mis: Nama pribadi, instansi, perusahaan atau sekolah)</label>
+            <input className={styles.input} {...register("name", { required: true })} />
+          </div>
 
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>NIK</label>
+            <input className={styles.input} {...register("identityNumber", { required: true })} />
+          </div>
 
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>No. Telepon</label>
+            <input className={styles.input} {...register("phone", { required: true })} />
+          </div>
 
-          <input type="submit" />
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Alamat</label>
+            <input className={styles.input} {...register("address", { required: true })} />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Provinsi</label>
+            <input className={styles.input} {...register("province", { required: true })} disabled />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Kota</label>
+            <input className={styles.input} {...register("city", { required: true })} />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Kecamatan</label>
+            <input className={styles.input} {...register("subdistrict", { required: true })} />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Kelurahan/Desa</label>
+            <input className={styles.input} {...register("village", { required: true })} />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Kode Pos</label>
+            <input className={styles.input} {...register("postal", { required: true })} />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Peruntukan</label>
+            <select className={styles.input} {...register("purpose", { required: true })}>
+              <option>Option 1</option>
+            </select>
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Jumlah Titik Lampu</label>
+            <input className={styles.input} {...register("lightSpot", { required: true })} type="number" />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Jumlah Saklar</label>
+            <input className={styles.input} {...register("switch", { required: true })} type="number" />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Jumlah Stop Kontak</label>
+            <input className={styles.input} {...register("socket", { required: true })} type="number" />
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Daya PLN(VA)</label>
+            <select className={styles.input} {...register("power", { required: true })}>
+              <option>Option 1</option>
+            </select>
+          </div>
+
+          <input type="submit" className={styles.submitButton}/>
         </form>
       </div>
     </div>
