@@ -23,7 +23,7 @@
   padding: 0.5rem;
   border-radius: 8px;
   border: 2px solid gray;
-  font-size: 1.2rem;
+  font-size: 16px;
 }
 
 .inputWrapper {
@@ -34,7 +34,7 @@
 
 .label {
   color: #8d99ae;
-  font-size: 1.2rem;
+  font-size: 14px;
 }
 
 .submitButton {
@@ -42,9 +42,13 @@
   color: white;
   outline: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 20px;
   padding: 1rem;
   border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.submitButton:disabled {
+  background-color: gray;
 }
