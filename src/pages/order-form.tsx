@@ -4,6 +4,8 @@ import PageLayout from "@/components/pageLayout"
 import styles from './order-form.module.css';
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@/components/error-message";
+import { PriceList } from "@/constants/price-list.constant";
+import { ConvertPriceDataToString } from "@/util/convert-price-data-to-string";
 
 const FORM_DEFAULT_VALUE = {
   name: "",
@@ -116,7 +118,15 @@ const OrderForm: NextPageWithLayout = () => {
           <div className={styles.inputWrapper}>
             <label className={styles.label}>Peruntukan</label>
             <select className={styles.input} {...register("purpose", { required: "Peruntukan tidak boleh kosong" })}>
-              <option>Option 1</option>
+              <option>Rumah Tangga</option>
+              <option>Bisnis</option>
+              <option>Kesehatan</option>
+              <option>Industri</option>
+              <option>Sekolah</option>
+              <option>Rumah Ibadah</option>
+              <option>Kantor</option>
+              <option>Pusat Perbelanjaan</option>
+              <option>Lainnya</option>
             </select>
             {errors.purpose ? <ErrorMessage message={errors.purpose.message}/> : null}
           </div>
@@ -142,7 +152,9 @@ const OrderForm: NextPageWithLayout = () => {
           <div className={styles.inputWrapper}>
             <label className={styles.label}>Daya PLN(VA)</label>
             <select className={styles.input} {...register("power", { required: "Daya PLN(VA) harus dipilih" })}>
-              <option>Option 1</option>
+              {
+                PriceList.map((data, idx) => <option>{ConvertPriceDataToString(data)}</option>)
+              }
             </select>
             {errors.power ? <ErrorMessage message={errors.power.message}/> : null}
           </div>
