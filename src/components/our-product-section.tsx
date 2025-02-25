@@ -3,9 +3,6 @@ import baseStyle from './base-section-style.module.css';
 import mergeStrings from '@/util/mergeClassname';
 import { ProductCard } from './product-card';
 
-// TODO: 
-// 1. Create definition of nidi and slo with image example
-// 2. Create card that will redirect to form if pressed
 export const OurProductSection = () => {
   return (
     <div className={baseStyle.container}>
@@ -40,11 +37,11 @@ export const OurProductSection = () => {
       <div className={styles.productCardContainer}>
         <ProductCard
           imageUrl='/card-nidi-logo.png'
-          title='Nomor Identitas Instalasi Listrik'
+          title='Nomor Identitas Instalasi Listrik (NIDI)'
         />
         <ProductCard
           imageUrl='/card-slo-logo.png'
-          title='Sertifikat Laik Operasi'
+          title='Sertifikat Laik Operasi (SLO)'
         />
       </div>
     </div>
