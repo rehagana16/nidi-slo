@@ -19,4 +19,11 @@
 
 .menuButton:hover {
   cursor: pointer;
+  background-color: #721D1D;
+  border-bottom: 2px solid white;
+}
+
+.activeMenu {
+  background-color: #721D1D;
+  border-bottom: 2px solid white;
 }
