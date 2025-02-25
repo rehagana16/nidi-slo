@@ -37,11 +37,11 @@ export const OurProductSection = () => {
       <div className={styles.productCardContainer}>
         <ProductCard
           imageUrl='/card-nidi-logo.png'
-          title='Nomor Identitas Instalasi Listrik'
+          title='Nomor Identitas Instalasi Listrik (NIDI)'
         />
         <ProductCard
           imageUrl='/card-slo-logo.png'
-          title='Sertifikat Laik Operasi'
+          title='Sertifikat Laik Operasi (SLO)'
         />
       </div>
     </div>

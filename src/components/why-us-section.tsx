@@ -22,6 +22,7 @@ export const WhyUsSection = () => {
           imageUrl='/cheap-icon.png'
           title='Terjangkau'
           content='Memberikan harga yang terjangkau'
+          isTerjangkau
         />
         <BenefitCard
           imageUrl='/fast-icon.png'
