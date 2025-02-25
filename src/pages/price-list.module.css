@@ -1,0 +1,25 @@
+.container {
+  padding: 5rem 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cell {
+  padding: 8px;
+  text-align: center;
+}
+
+.header {
+  background-color: #6b1919;
+  font-weight: 500;
+  color: white;
+}
+
+.table {
+  width: 100%;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
