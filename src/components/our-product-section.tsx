@@ -3,9 +3,6 @@ import baseStyle from './base-section-style.module.css';
 import mergeStrings from '@/util/mergeClassname';
 import { ProductCard } from './product-card';
 
-// TODO: 
-// 1. Create definition of nidi and slo with image example
-// 2. Create card that will redirect to form if pressed
 export const OurProductSection = () => {
   return (
     <div className={baseStyle.container}>

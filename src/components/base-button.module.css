@@ -1,11 +1,11 @@
 .buttonContainer {
-  outline: none;
   border: none;
   background-color: #6b1919;
   color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-weight: 700;
+  padding: 4px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .buttonContainer:hover {
