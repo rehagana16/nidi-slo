@@ -153,7 +153,7 @@ const OrderForm: NextPageWithLayout = () => {
             <label className={styles.label}>Daya PLN(VA)</label>
             <select className={styles.input} {...register("power", { required: "Daya PLN(VA) harus dipilih" })}>
               {
-                PriceList.map((data, idx) => <option>{ConvertPriceDataToString(data)}</option>)
+                PriceList.map((data, idx) => <option key={idx}>{ConvertPriceDataToString(data)}</option>)
               }
             </select>
             {errors.power ? <ErrorMessage message={errors.power.message}/> : null}
