@@ -10,14 +10,14 @@ const PriceListPage: NextPageWithLayout = () => {
       <h1>List Harga</h1>
       <table className={styles.table}>
         <tbody>
-          <tr>
+          <tr className={styles.row}>
             <th className={mergeStrings(styles.header, styles.cell)}>Daya</th>
             <th className={mergeStrings(styles.header, styles.cell)}>Biaya Supervisi NIDI</th>
             <th className={mergeStrings(styles.header, styles.cell)}>Biaya SLO</th>
             <th className={mergeStrings(styles.header, styles.cell)}>Jumlah</th>
           </tr>
           {PriceList.map((data, idx) => (
-            <tr key={idx}>
+            <tr className={styles.row} key={idx}>
               <td className={styles.cell}>{data.daya}</td>
               <td className={styles.cell}>{data.biayaSupervisiNidi}</td>
               <td className={styles.cell}>{data.biayaSlo}</td>
