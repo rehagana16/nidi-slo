@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import './global.css';
 import { Montserrat } from 'next/font/google'
-import Head from 'next/head';
+import Script from 'next/script';
  
 const montserrat = Montserrat({
   weight: ['400', '500', '700'],
@@ -25,9 +25,7 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
  
   return (
     <>
-      <Head>
-        <script src="https://kit.fontawesome.com/3efa7fb350.js" crossOrigin="anonymous"></script>
-      </Head>
+      <Script src="https://kit.fontawesome.com/3efa7fb350.js" crossOrigin="anonymous"></Script>
       <main className={montserrat.className}>
         {getLayout(<Component {...pageProps} />)}
       </main>

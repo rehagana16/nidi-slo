@@ -2,7 +2,7 @@ import styles from './footer.module.css';
 import baseStyles from './base-section-style.module.css';
 import mergeStrings from '@/util/mergeClassname';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faLocationDot,  faMailBulk,  faMailForward,  faMailReply,  faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faLocationDot, faMailBulk, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 export const Footer = () => {
   return(
