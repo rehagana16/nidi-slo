@@ -2,6 +2,7 @@ import styles from './our-product-section.module.css';
 import baseStyle from './base-section-style.module.css';
 import mergeStrings from '@/util/mergeClassname';
 import { ProductCard } from './product-card';
+import Image from 'next/image';
 
 export const OurProductSection = () => {
   return (
@@ -12,7 +13,12 @@ export const OurProductSection = () => {
       <div className={baseStyle.horizontalDivider}/>
       <div className={styles.contentSection}>
         <div className={styles.leftContent}>
-          <div className={styles.imageContainer} />
+          <Image
+            src="/nidi-slo-example.png"
+            alt="Nidi slo example image"
+            width={300}
+            height={200}
+          />
         </div>
         <div className={styles.rightContent}>
           <div className={styles.text}>

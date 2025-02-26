@@ -7,7 +7,7 @@ export const SupportedSection = () => {
   return(
     <div className={mergeStrings(baseStyle.container, styles.colorBackground)}>
       <div className={baseStyle.sectionHeader}>
-        Supported By
+        Bekerja sama dengan
       </div>
       <div className={baseStyle.horizontalDivider}/>
       <div className={styles.imageContainer}>
