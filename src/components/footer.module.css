@@ -21,12 +21,12 @@
  align-items: flex-start;
  justify-content: center;
  padding: 5rem;
+ gap: 2rem;
 }
 
 .header {
   font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 1.6rem;
 }
 
 .left {
@@ -50,4 +50,23 @@
 
 .backgroundWhite.backgroundWhite {
   background-color: white;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  color: #E1D9D1;
+  gap: 24px;
+}
+
+.horizontalDivider {
+  background-color: white;
+  width: 70px;
+  height: 5px;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
