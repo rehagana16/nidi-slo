@@ -14,3 +14,10 @@
   display: flex;
   gap: 32px;
 }
+
+@media(max-width: 1280px) {
+  .cardSection {
+    flex-direction: column;
+    align-items: center;
+  }
+}

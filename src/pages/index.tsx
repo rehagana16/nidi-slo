@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div className={styles.globalStyle}>
       <HeroSection />
-      {/* <OurProductSection />
+      <OurProductSection />
       <WhyUsSection />
       <OrderStepSection />
-      <SupportedSection /> */}
+      <SupportedSection />
     </div>
   );
 }
