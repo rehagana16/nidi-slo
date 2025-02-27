@@ -6,7 +6,7 @@ import Image from 'next/image';
 export const OrderStepSection = () => {
   return (
     <div className={baseStyles.container}>
-      <div className={baseStyles.sectionHeader}>Order Step</div>
+      <div className={baseStyles.sectionHeader}>Alur Permohonan</div>
       <div className={baseStyles.horizontalDivider}/>
       <div className={styles.imageContainer}>
         <Image
