@@ -15,6 +15,10 @@ export const Navbar = () => {
   const handleClick = (url: string) => {
     router.push(url);
   }
+  const handleClickMobile = (url: string) => {
+    router.push(url);
+    setIsOpen(false);
+  }
   const handleClickMenuButton = () => {
     setIsOpen((prevState) => !prevState);
   }
@@ -70,19 +74,19 @@ export const Navbar = () => {
           <div className={styles.menuDropdown}>
             <div
               className={styles.dropdownMenu}
-              onClick={() => handleClick('/')}
+              onClick={() => handleClickMobile('/')}
             >
               Beranda
             </div>
             <div
               className={styles.dropdownMenu}
-              onClick={() => handleClick('/order-form')}
+              onClick={() => handleClickMobile('/order-form')}
             >
               Buat Permohonan
             </div>
             <div
               className={styles.dropdownMenu}
-              onClick={() => handleClick('/price-list')}
+              onClick={() => handleClickMobile('/price-list')}
             >
               Tarif Nidi & Slo
             </div>
