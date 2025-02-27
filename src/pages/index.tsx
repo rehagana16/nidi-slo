@@ -9,11 +9,11 @@ import styles from "./index.module.css";
 export default function Home() {
   return (
     <div className={styles.globalStyle}>
-      <HeroSection />
+      {/* <HeroSection />
       <OurProductSection />
       <WhyUsSection />
       <OrderStepSection />
-      <SupportedSection />
+      <SupportedSection /> */}
     </div>
   );
 }

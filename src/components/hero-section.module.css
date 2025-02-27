@@ -6,3 +6,9 @@
   background-color: #F8F2DE;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

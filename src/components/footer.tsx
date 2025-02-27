@@ -19,7 +19,7 @@ export const Footer = () => {
           <div className={styles.horizontalDivider}/>
           <div className={styles.section}>
             <div>
-              <FontAwesomeIcon icon={faLocationDot} className={styles.icon}/>
+              <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
             </div>
             <div>
               <div>Kota Medan,</div>
