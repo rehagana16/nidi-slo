@@ -34,12 +34,13 @@ export const Footer = () => {
             display: "flex",
             flexDirection: "column",
             gap: "8px",
+            width: "100%",
           }}>
             <div className={styles.section}>
               <div>
                 <FontAwesomeIcon icon={faPhone} className={styles.icon}/>
               </div>
-              <div>
+              <div className={styles.breakWord}>
                 <a
                   className={styles.whatsApp}
                   href={`https://api.whatsapp.com/send?phone=+6281360889785&text=${encodeURI("Hai saya ingin melakukan instalasi NIDI dan SLO")}`}
@@ -52,7 +53,7 @@ export const Footer = () => {
               <div>
                 <FontAwesomeIcon icon={faMailBulk} className={styles.icon}/>
               </div>
-              <div>
+              <div className={styles.breakWord}>
                 nidisloinstalasilistriksumut@gmail.com
               </div>
             </div>

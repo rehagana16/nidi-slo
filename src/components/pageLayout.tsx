@@ -14,7 +14,7 @@ export default function PageLayout({ children }: Props) {
     <>
       <Navbar />
       <main className={styles.layout}>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
       <Copyright />
     </>
   )
