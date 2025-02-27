@@ -40,7 +40,12 @@ export const Footer = () => {
                 <FontAwesomeIcon icon={faPhone} className={styles.icon}/>
               </div>
               <div>
-                081360889785
+                <a
+                  className={styles.whatsApp}
+                  href={`https://api.whatsapp.com/send?phone=+6281360889785&text=${encodeURI("Hai saya ingin melakukan instalasi NIDI dan SLO")}`}
+                >
+                  081360889785
+                </a>
               </div>
             </div>
             <div className={styles.section}>

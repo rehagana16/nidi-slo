@@ -6,8 +6,10 @@ import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@/components/error-message";
 import { PriceList } from "@/constants/price-list.constant";
 import { ConvertPriceDataToString } from "@/util/convert-price-data-to-string";
+import { OrderFormData, OrderFormDataMessageKeyEnum } from "@/interface/order-form.interface";
+import { encodeOrderFormDataToURI } from "@/util/encode-form-to-uri";
 
-const FORM_DEFAULT_VALUE = {
+const FORM_DEFAULT_VALUE: OrderFormData = {
   name: "",
   identityNumber: "",
   phone: "",
@@ -38,7 +40,7 @@ const OrderForm: NextPageWithLayout = () => {
       <div style={{width: '100%'}}>
         <form
           onSubmit={handleSubmit((data) => {
-            console.log(data);
+            window.open(`https://api.whatsapp.com/send?phone=+6281360889785&text=${encodeURIComponent('Halo saya ingin melakukan permohonan NIDI dan SLO!')}%0A%0A${encodeOrderFormDataToURI(data, OrderFormDataMessageKeyEnum)})}`)
           })}
           className={styles.formContainer}
         >
