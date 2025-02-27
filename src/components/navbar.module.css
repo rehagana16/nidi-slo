@@ -60,11 +60,6 @@
     display: none;
   }
 
-  .imageContainer {
-    width: 200px;
-    height: 75px;
-  }
-
   .menuButtonContainer {
     display: block;
     position: absolute;
