@@ -1,5 +1,8 @@
 .container {
-  padding: 5rem 20rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
   display: flex;
   background-color: #6B1919;
   flex-direction: column;
@@ -99,5 +102,16 @@
 
   .right {
     width: 100%;
+  }
+}
+
+@media(max-width: 540px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .column {
+    padding: 2rem;
   }
 }
