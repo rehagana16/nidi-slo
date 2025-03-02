@@ -23,3 +23,21 @@
 .row:nth-child(even){
   background-color: #f2f2f2;
 }
+
+@media(max-width: 1280px) {
+  .container {
+    padding: 5rem;
+  }
+}
+
+@media(max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+@media(max-width: 480px) {
+  .table {
+    font-size: 12px;
+  }
+}

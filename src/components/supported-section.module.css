@@ -5,5 +5,12 @@
 }
 
 .colorBackground {
-  background-color: #ECDCBF;
+  background-color: #F8F2DE;
+}
+
+@media(max-width: 540px) {
+  .imageContainer {
+    width: 100%;
+    height: 32vw;
+  }
 }

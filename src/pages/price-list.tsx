@@ -7,7 +7,7 @@ import mergeStrings from "@/util/mergeClassname";
 const PriceListPage: NextPageWithLayout = () => {
   return(
     <div className={styles.container}>
-      <h1>List Harga</h1>
+      <h1 className={styles.title}>List Harga</h1>
       <table className={styles.table}>
         <tbody>
           <tr className={styles.row}>

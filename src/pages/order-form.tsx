@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { NextPageWithLayout } from "./_app"
 import PageLayout from "@/components/pageLayout"
 import styles from './order-form.module.css';
@@ -6,8 +6,12 @@ import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@/components/error-message";
 import { PriceList } from "@/constants/price-list.constant";
 import { ConvertPriceDataToString } from "@/util/convert-price-data-to-string";
+import { OrderFormData, OrderFormDataMessageKeyEnum } from "@/interface/order-form.interface";
+import { encodeOrderFormDataToURI } from "@/util/encode-form-to-uri";
+import { dataDesaResponse, dataKabupatenResponse, dataKecamatanResponse } from "@/interface/api-wilayah.interface";
+import { apiGetWilayahIndonesia } from "@/api/api-wilayah-indonesia";
 
-const FORM_DEFAULT_VALUE = {
+const FORM_DEFAULT_VALUE: OrderFormData = {
   name: "",
   identityNumber: "",
   phone: "",
@@ -25,6 +29,11 @@ const FORM_DEFAULT_VALUE = {
 }
 
 const OrderForm: NextPageWithLayout = () => {
+  const [dataKabupatenKota, setDataKabupatenKota] = useState<dataKabupatenResponse[]>([]);
+  const [regencyId, setRegencyId] = useState<string>('');
+  const [dataKecamatan, setDataKecamatan] = useState<dataKecamatanResponse[]>([]);
+  const [districtId, setDistrictId] = useState<string>('');
+  const [dataDesa, setDataDesa] = useState<dataDesaResponse[]>([]);
   const {
     register,
     handleSubmit,
@@ -32,13 +41,83 @@ const OrderForm: NextPageWithLayout = () => {
   } = useForm({
     defaultValues: FORM_DEFAULT_VALUE,
   });
+
+  useEffect(() => {
+    // Define an async function inside the useEffect
+    const fetchData = async () => {
+      try {
+        const response = await apiGetWilayahIndonesia.getKabupatenKota();
+        if (!response) {
+          throw new Error('Failed to get data kabupaten');
+        }
+        setDataKabupatenKota(response.data);
+      } catch (error) {
+        alert(error)
+      }
+    };
+
+    // Call the async function
+    fetchData();
+
+  }, [])
+
+  useEffect(() => {
+    // Define an async function inside the useEffect
+    const fetchData = async () => {
+      try {
+        const response = await apiGetWilayahIndonesia.getKecamatan(regencyId);
+        if (!response) {
+          throw new Error('Failed to get data kabupaten');
+        }
+        setDataKecamatan(response.data);
+      } catch (error) {
+        alert(error)
+      }
+    };
+
+    // Call the async function
+    if (regencyId !== '') {
+      fetchData();
+    }
+
+  }, [regencyId]);
+
+  const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setRegencyId(e.target.value);
+  }
+
+  useEffect(() => {
+    // Define an async function inside the useEffect
+    const fetchData = async () => {
+      try {
+        const response = await apiGetWilayahIndonesia.getDesa(districtId);
+        if (!response) {
+          throw new Error('Failed to get data desa');
+        }
+        setDataDesa(response.data);
+      } catch (error) {
+        alert(error)
+      }
+    };
+
+    // Call the async function
+    if (districtId !== '') {
+      fetchData();
+    }
+
+  }, [districtId]);
+
+  const handleDistrictChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setDistrictId(e.target.value);
+  }
+
   return(
     <div className={styles.container}>
       <div className={styles.title}>Formulir Permohonan</div>
       <div style={{width: '100%'}}>
         <form
           onSubmit={handleSubmit((data) => {
-            console.log(data);
+            window.open(`https://api.whatsapp.com/send?phone=+6281360889785&text=${encodeURIComponent('Halo saya ingin melakukan permohonan NIDI dan SLO!')}%0A%0A${encodeOrderFormDataToURI(data, OrderFormDataMessageKeyEnum)})}`)
           })}
           className={styles.formContainer}
         >
@@ -93,19 +172,48 @@ const OrderForm: NextPageWithLayout = () => {
 
           <div className={styles.inputWrapper}>
             <label className={styles.label}>Kota</label>
-            <input className={styles.input} {...register("city", { required: "Kota tidak boleh kosong" })} />
+            <select
+              className={styles.input}
+              {...register("city", { required: "Kabupaten/kota tidak boleh kosong" })}
+              onChange={handleCityChange}  
+            >
+              {
+                dataKabupatenKota.map((data, idx) => (
+                  <option key={idx} value={data.id}>{data.name}</option>
+                ))
+              }
+            </select>
             {errors.city ? <ErrorMessage message={errors.city.message}/> : null}
           </div>
 
           <div className={styles.inputWrapper}>
             <label className={styles.label}>Kecamatan</label>
-            <input className={styles.input} {...register("subdistrict", { required: "Kecamatan tidak boleh kosong" })} />
+            <select
+              className={styles.input}
+              {...register("subdistrict", { required: "Kecamatan tidak boleh kosong" })}
+              onChange={handleDistrictChange}
+            >
+              {
+                dataKecamatan.map((data, idx) => (
+                  <option key={idx} value={data.id}>{data.name}</option>
+                ))
+              }
+            </select>
             {errors.subdistrict ? <ErrorMessage message={errors.subdistrict.message}/> : null}
           </div>
 
           <div className={styles.inputWrapper}>
             <label className={styles.label}>Kelurahan/Desa</label>
-            <input className={styles.input} {...register("village", { required: "Kelurahan/Desa tidak boleh kosong" })} />
+            <select
+              className={styles.input}
+              {...register("village", { required: "Desa/kelurahan tidak boleh kosong" })}
+            >
+              {
+                dataDesa.map((data, idx) => (
+                  <option key={idx} value={data.id}>{data.name}</option>
+                ))
+              }
+            </select>
             {errors.village ? <ErrorMessage message={errors.village.message}/> : null}
           </div>
 
