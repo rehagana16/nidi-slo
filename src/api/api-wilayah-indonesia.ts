@@ -1,6 +1,5 @@
 import { AxiosInstance } from "axios";
 import { APIWilayahInstance } from "./axios-instance";
-import { dataKabupatenResponse } from "@/interface/api-wilayah.interface";
 
 class ApiGetWilayahIndonesia {
   private api: AxiosInstance;
