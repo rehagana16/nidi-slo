@@ -1,6 +1,5 @@
 import styles from './our-product-section.module.css';
 import baseStyle from './base-section-style.module.css';
-import mergeStrings from '@/util/mergeClassname';
 import { ProductCard } from './product-card';
 import Image from 'next/image';
 
