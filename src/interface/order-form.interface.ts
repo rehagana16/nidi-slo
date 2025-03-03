@@ -13,6 +13,7 @@ export interface OrderFormData {
   switch: number;
   socket: number;
   power: string;
+  isChecked: boolean;
 }
 
 export enum OrderFormDataMessageKeyEnum {

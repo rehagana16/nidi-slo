@@ -10,6 +10,7 @@ import { OrderFormData, OrderFormDataMessageKeyEnum } from "@/interface/order-fo
 import { encodeOrderFormDataToURI } from "@/util/encode-form-to-uri";
 import { dataDesaResponse, dataKabupatenResponse, dataKecamatanResponse } from "@/interface/api-wilayah.interface";
 import { apiGetWilayahIndonesia } from "@/api/api-wilayah-indonesia";
+import { AttentionSection } from "@/components/attention-section";
 
 const FORM_DEFAULT_VALUE: OrderFormData = {
   name: "",
@@ -26,6 +27,7 @@ const FORM_DEFAULT_VALUE: OrderFormData = {
   switch: 0,
   socket: 0,
   power: "",
+  isChecked: false,
 }
 
 const OrderForm: NextPageWithLayout = () => {
@@ -113,6 +115,7 @@ const OrderForm: NextPageWithLayout = () => {
 
   return(
     <div className={styles.container}>
+      <AttentionSection />
       <div className={styles.title}>Formulir Permohonan</div>
       <div style={{width: '100%'}}>
         <form
@@ -265,6 +268,17 @@ const OrderForm: NextPageWithLayout = () => {
               }
             </select>
             {errors.power ? <ErrorMessage message={errors.power.message}/> : null}
+          </div>
+
+          <div className={styles.inputWrapper}>
+            <label className={styles.label}>Pernyataan</label>
+            <div className={styles.checkboxWrapper}>
+              <input className={styles.input} {...register("isChecked", { required: "Pernyataan harus diisi" })} type="checkbox" />
+              <div>
+                Dengan ini menyatakan bahwa instalasi pemanfaatan tenaga listrik tegangan rendah dengan data diatas TELAH TERPASANG OLEH PEMILIK SESUAI DENGAN STANDAR. Segala resiko yang timbul dari instalasi tersebut merupakan tanggung jawab pemilik instalasi sepenuhnya.
+              </div>
+            </div>
+            {errors.socket ? <ErrorMessage message={errors.socket.message}/> : null}
           </div>
 
           <input
