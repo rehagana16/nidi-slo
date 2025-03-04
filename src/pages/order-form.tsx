@@ -274,7 +274,7 @@ const OrderForm: NextPageWithLayout = () => {
             <label className={styles.label}>Pernyataan</label>
             <div className={styles.checkboxWrapper}>
               <input className={styles.input} {...register("isChecked", { required: "Pernyataan harus diisi" })} type="checkbox" />
-              <div>
+              <div className={styles.justify}>
                 Dengan ini menyatakan bahwa instalasi pemanfaatan tenaga listrik tegangan rendah dengan data diatas TELAH TERPASANG OLEH PEMILIK SESUAI DENGAN STANDAR. Segala resiko yang timbul dari instalasi tersebut merupakan tanggung jawab pemilik instalasi sepenuhnya.
               </div>
             </div>
