@@ -2,7 +2,7 @@
   padding: 3rem 1.5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 16px;
-  width: 250px;
+  width: 350px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   display: flex;
@@ -17,4 +17,14 @@
   font-weight: 700;
   color: #D2665A;
   font-size: 1rem;
+}
+
+.button.button {
+  padding: 0.8rem;
+  font-size: 14px;
+}
+
+.imageContainer {
+  display: flex;
+  gap: 24px;
 }

@@ -4,7 +4,6 @@ import mergeStrings from '@/util/mergeClassname';
 import { BenefitCard } from './benefit-card';
 
 
-// TODO: Create section why us and card that show our excellence
 export const WhyUsSection = () => {
   return (
     <div className={mergeStrings(baseStyles.container, styles.redBackground)}>

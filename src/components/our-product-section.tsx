@@ -1,6 +1,5 @@
 import styles from './our-product-section.module.css';
 import baseStyle from './base-section-style.module.css';
-import mergeStrings from '@/util/mergeClassname';
 import { ProductCard } from './product-card';
 import Image from 'next/image';
 
@@ -22,6 +21,10 @@ export const OurProductSection = () => {
         </div>
         <div className={styles.rightContent}>
           <div className={styles.text}>
+            Kami merupakan salah satu <span className={styles.boldText}>badan usaha resmi yang menerbitkan NIDI dan SLO resmi</span> yang bekerja sama dengan 
+            <span className={styles.boldText}> PLN dan ESDM.</span> Kami melayani permintaan penerbitan NIDI dan SLO pada <span className={styles.boldText}>wilayah Sumatera Utara.</span>
+          </div>
+          <div className={styles.text}>
             <span className={styles.boldText}>NIDI (Nomor Identitas Instalasi Listrik)</span> merupakan nomor identitas yang dikeluarkan
             <span className={styles.boldText}> Kementerian ESDM</span> untuk instalasi listrik yang telah selesai
             dipasang atau dibangun oleh pelaku usaha jasa pembangunan dan pemasangan instalasi listrik yang memiliki
@@ -34,20 +37,13 @@ export const OurProductSection = () => {
             sebagaimana kesesuaian persyaratan standar yang ditentukan bagi instalasi tersebut dan dinyatakan
             laik dioperasikan. 
           </div>
-          <div className={mergeStrings(styles.text, styles.boldText)}>
-            Kami merupakan salah satu badan usaha resmi yang menerbitkan NIDI dan SLO resmi yang bekerja sama dengan PLN dan ESDM.
-            Kami melayani permintaan penerbitan NIDI dan SLO pada wilayah Sumatera Utara.
-          </div>
         </div>
       </div>
       <div className={styles.productCardContainer}>
         <ProductCard
-          imageUrl='/card-nidi-logo.png'
-          title='Nomor Identitas Instalasi Listrik (NIDI)'
-        />
-        <ProductCard
-          imageUrl='/card-slo-logo.png'
-          title='Sertifikat Laik Operasi (SLO)'
+          imageUrl1='/card-nidi-logo.png'
+          imageUrl2='/card-slo-logo.png'
+          title='Isi data permohonan NIDI dan SLO anda'
         />
       </div>
     </div>

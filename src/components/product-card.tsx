@@ -5,7 +5,8 @@ import { BaseButton } from './base-button';
 import { useRouter } from 'next/router';
 
 interface Props {
-  imageUrl: string;
+  imageUrl1: string;
+  imageUrl2: string;
   title: string;
 }
 export const ProductCard: React.FC<Props> = (props) => {
@@ -17,14 +18,20 @@ export const ProductCard: React.FC<Props> = (props) => {
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
         <Image
-          src={props.imageUrl}
+          src={props.imageUrl1}
+          alt='card-nidi-slo-logo'
+          width={75}
+          height={75}
+        />
+        <Image
+          src={props.imageUrl2}
           alt='card-nidi-slo-logo'
           width={75}
           height={75}
         />
       </div>
       <div className={styles.title}>{props.title}</div>
-      <BaseButton onClick={handleClick}>
+      <BaseButton className={styles.button} onClick={handleClick}>
         <p>Buat Permohonan</p>
       </BaseButton>
     </div>

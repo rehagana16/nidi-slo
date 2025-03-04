@@ -13,6 +13,7 @@ export interface OrderFormData {
   switch: number;
   socket: number;
   power: string;
+  isChecked: boolean;
 }
 
 export enum OrderFormDataMessageKeyEnum {
@@ -29,5 +30,6 @@ export enum OrderFormDataMessageKeyEnum {
   lightSpot = 'Jumlah Titik Lampu',
   switch = 'Jumlah saklar',
   socket = 'Jumlah Stop Kontak',
-  power = 'Daya(VA) PLN'
+  power = 'Daya(VA) PLN',
+  isChecked = 'Sudah Check'
 }
