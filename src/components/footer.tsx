@@ -22,6 +22,7 @@ export const Footer = () => {
               <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
             </div>
             <div>
+              <div>Jl. Bunga Wijaya Kesuma 51,</div>
               <div>Kota Medan,</div>
               <div>Sumatera Utara</div>
             </div>
