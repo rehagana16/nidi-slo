@@ -19,6 +19,18 @@ class ApiGetWilayahIndonesia {
   async getDesa(districtId: string) {
     return this.api.get(`villages/${districtId}.json`);
   }
+
+  async getKabupatenKotaData(id: string) {
+    return this.api.get(`regency/${id}.json`)
+  }
+
+  async getKecamatanData(id: string) {
+    return this.api.get(`district/${id}.json`)
+  }
+
+  async getDesaData(id: string) {
+    return this.api.get(`village/${id}.json`)
+  }
 }
 
 export const apiGetWilayahIndonesia = new ApiGetWilayahIndonesia();

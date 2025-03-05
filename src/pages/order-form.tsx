@@ -113,13 +113,58 @@ const OrderForm: NextPageWithLayout = () => {
     setDistrictId(e.target.value);
   }
 
+  const getCityName = async (id: string) => {
+    if (id !== '') {
+      try {
+        const response = await apiGetWilayahIndonesia.getKabupatenKotaData(id);
+        if (!response) {
+          throw new Error('Failed to get data kota');
+        }
+        return response.data.name;
+      } catch (error) {
+        alert(error)
+      }
+    }
+  }
+
+  const getDistrictName = async (id: string) => {
+    if (id !== '') {
+      try {
+        const response = await apiGetWilayahIndonesia.getKecamatanData(id);
+        if (!response) {
+          throw new Error('Failed to get data kota');
+        }
+        return response.data.name;
+      } catch (error) {
+        alert(error)
+      }
+    }
+  }
+
+  const getVillageName = async (id: string) => {
+    if (id !== '') {
+      try {
+        const response = await apiGetWilayahIndonesia.getDesaData(id);
+        if (!response) {
+          throw new Error('Failed to get data kota');
+        }
+        return response.data.name;
+      } catch (error) {
+        alert(error)
+      }
+    }
+  }
+
   return(
     <div className={styles.container}>
       <AttentionSection />
       <div className={styles.title}>Formulir Permohonan</div>
       <div style={{width: '100%'}}>
         <form
-          onSubmit={handleSubmit((data) => {
+          onSubmit={handleSubmit(async (data) => {
+            data.city = await getCityName(data.city);
+            data.subdistrict = await getDistrictName(data.subdistrict);
+            data.village = await getVillageName(data.village);
             window.open(`https://api.whatsapp.com/send?phone=+6281360889785&text=${encodeURIComponent('Halo saya ingin melakukan permohonan NIDI dan SLO!')}%0A%0A${encodeOrderFormDataToURI(data, OrderFormDataMessageKeyEnum)})}`)
           })}
           className={styles.formContainer}
