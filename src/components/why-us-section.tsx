@@ -15,7 +15,7 @@ export const WhyUsSection = () => {
         <BenefitCard
           imageUrl='/authentic-icon.png'
           title='Terpercaya'
-          content='Sudah mengeluarkan xx jumlah slo dan nidi resmi dari Kementerian ESDM dan PLN'
+          content='Sudah mengeluarkan 2000 NIDI SLO/bulan'
         />
         <BenefitCard
           imageUrl='/cheap-icon.png'
@@ -26,7 +26,7 @@ export const WhyUsSection = () => {
         <BenefitCard
           imageUrl='/fast-icon.png'
           title='Cepat'
-          content='Pengeluaran sertifikat berkisar x - x hari/minggu'
+          content='Mengeluarkan 500 sertifikat/minggu'
         />
       </div>
     </div>
