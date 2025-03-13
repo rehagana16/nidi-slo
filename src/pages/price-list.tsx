@@ -12,6 +12,7 @@ const PriceListPage: NextPageWithLayout = () => {
         <title>Tarif permohonan NIDI SLO Sumut</title>
 
         {/* Adding custom favicon */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -34,14 +35,14 @@ const PriceListPage: NextPageWithLayout = () => {
         <meta name="description"
             content="TARIF HARGA NIDI SLO PLN SUMUT" />
         <meta name="keywords"
-            content="NIDI, SLO, NIDI SLO, Tarif NIDI SLO, Tarif NIDI SLO Sumut, Sumut, Sumatera Utara, Sumatra Utara ,Harga NIDI SLO, Harga NIDI SLO Sumut, Tarif NIDI SLO Sumatera Utara, Harga NIDI SLO Sumatera Utara" />
+            content="Tarif NIDI SLO, Tarif NIDI SLO Sumut, Sumut, Sumatera Utara, Sumatra Utara ,Harga NIDI SLO, Harga NIDI SLO Sumut, Tarif NIDI SLO Sumatera Utara, Harga NIDI SLO Sumatera Utara" />
         <meta name="author"
             content="Rehagana Sembiring" />
         <meta name="viewport"
             content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className={styles.container}>
-        <h1 className={styles.title}>List Harga</h1>
+        <h1 className={styles.title}>List Harga NIDI SLO</h1>
         <table className={styles.table}>
           <tbody>
             <tr className={styles.row}>

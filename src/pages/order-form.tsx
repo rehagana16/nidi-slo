@@ -162,6 +162,7 @@ const OrderForm: NextPageWithLayout = () => {
         <title>Buat permohonan NIDI SLO Anda</title>
 
         {/* Adding custom favicon */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -184,7 +185,7 @@ const OrderForm: NextPageWithLayout = () => {
         <meta name="description"
             content="NIDI SLO PLN SUMUT" />
         <meta name="keywords"
-            content="NIDI, SLO, NIDI SLO, Daftar NIDI SLO, Daftar NIDI SLO Sumut, Sumut, Sumatera Utara, Sumatra Utara, Permohonan NIDI SLO, Permohonan NIDI SLO Sumut, Permohonan NIDI SLO Sumatera Utara" />
+            content="Daftar NIDI SLO, Daftar NIDI SLO Sumut, Sumut, Sumatera Utara, Sumatra Utara, Permohonan NIDI SLO, Permohonan NIDI SLO Sumut, Permohonan NIDI SLO Sumatera Utara" />
         <meta name="author"
             content="Rehagana Sembiring" />
         <meta name="viewport"

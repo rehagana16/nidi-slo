@@ -14,6 +14,7 @@ export default function Home() {
         <title>Daftar NIDI SLO SUMUT - NIDI - PLN</title>
 
         {/* Adding custom favicon */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
