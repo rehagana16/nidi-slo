@@ -40,6 +40,8 @@ const PriceListPage: NextPageWithLayout = () => {
             content="Rehagana Sembiring" />
         <meta name="viewport"
             content="width=device-width, initial-scale=1.0" />
+
+        <link rel="canonical" href="https://nidi-slo-sumut.com/price-list" />
       </Head>
       <div className={styles.container}>
         <h1 className={styles.title}>List Harga NIDI SLO</h1>

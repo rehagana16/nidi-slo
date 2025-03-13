@@ -42,6 +42,8 @@ export default function Home() {
             content="Rehagana Sembiring" />
         <meta name="viewport"
             content="width=device-width, initial-scale=1.0" />
+
+        <link rel="canonical" href="https://nidi-slo-sumut.com" />
       </Head>
       <div className={styles.globalStyle}>
         <HeroSection />
