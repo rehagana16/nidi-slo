@@ -45,18 +45,18 @@ export const Navbar = () => {
         <div
           className={mergeStrings(
             styles.menuButton,
-            pathname === '/order-form' ? styles.activeMenu : ''
+            pathname === '/daftar-nidi-slo' ? styles.activeMenu : ''
           )}
-          onClick={() => handleClick('/order-form')}
+          onClick={() => handleClick('/daftar-nidi-slo')}
         >
           Buat Permohonan
         </div>
         <div
           className={mergeStrings(
             styles.menuButton,
-            pathname === '/price-list' ? styles.activeMenu : ''
+            pathname === '/daftar-harga-nidi-slo' ? styles.activeMenu : ''
           )}
-          onClick={() => handleClick('/price-list')}
+          onClick={() => handleClick('/daftar-harga-nidi-slo')}
         >
           Tarif Nidi & Slo
         </div>
@@ -80,13 +80,13 @@ export const Navbar = () => {
             </div>
             <div
               className={styles.dropdownMenu}
-              onClick={() => handleClickMobile('/order-form')}
+              onClick={() => handleClickMobile('/daftar-nidi-slo')}
             >
               Buat Permohonan
             </div>
             <div
               className={styles.dropdownMenu}
-              onClick={() => handleClickMobile('/price-list')}
+              onClick={() => handleClickMobile('/daftar-harga-nidi-slo')}
             >
               Tarif Nidi & Slo
             </div>

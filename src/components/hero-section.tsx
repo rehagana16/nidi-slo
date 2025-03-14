@@ -8,7 +8,7 @@ export const HeroSection = () => {
     <div
       className={styles.container}
       onClick={() => {
-        router.push('/order-form')
+        router.push('/daftar-nidi-slo')
       }}  
     >
       <Image

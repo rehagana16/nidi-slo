@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { NextPageWithLayout } from "./_app"
 import PageLayout from "@/components/pageLayout"
-import styles from './order-form.module.css';
+import styles from './daftar-nidi-slo.module.css';
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@/components/error-message";
 import { PriceList } from "@/constants/price-list.constant";
@@ -191,7 +191,7 @@ const OrderForm: NextPageWithLayout = () => {
         <meta name="viewport"
             content="width=device-width, initial-scale=1.0" />
 
-        <link rel="canonical" href="https://nidi-slo-sumut.com/order-form" />
+        <link rel="canonical" href="https://nidi-slo-sumut.com/daftar-nidi-slo" />
       </Head>
       <div className={styles.container}>
         <AttentionSection />

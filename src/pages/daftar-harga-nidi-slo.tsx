@@ -1,6 +1,6 @@
 import PageLayout from "@/components/pageLayout";
 import { NextPageWithLayout } from "./_app";
-import styles from './price-list.module.css';
+import styles from './daftar-harga-nidi-slo.module.css';
 import { PriceList } from "@/constants/price-list.constant";
 import mergeStrings from "@/util/mergeClassname";
 import Head from "next/head";
@@ -41,7 +41,7 @@ const PriceListPage: NextPageWithLayout = () => {
         <meta name="viewport"
             content="width=device-width, initial-scale=1.0" />
 
-        <link rel="canonical" href="https://nidi-slo-sumut.com/price-list" />
+        <link rel="canonical" href="https://nidi-slo-sumut.com/daftar-harga-nidi-slo" />
       </Head>
       <div className={styles.container}>
         <h1 className={styles.title}>List Harga NIDI SLO</h1>

@@ -29,7 +29,7 @@ export const BenefitCard: React.FC<Props> = (props) => {
         props.isTerjangkau ? (
           <BaseButton
             onClick={() => {
-              router.push('/price-list');
+              router.push('/daftar-harga-nidi-slo');
             }}
           >
             <p>Cek Harga Kami</p>

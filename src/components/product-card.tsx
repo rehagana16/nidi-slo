@@ -12,7 +12,7 @@ interface Props {
 export const ProductCard: React.FC<Props> = (props) => {
   const router = useRouter();
   const handleClick = () => {
-    router.push('/order-form');
+    router.push('/daftar-nidi-slo');
   }
   return (
     <div className={styles.cardContainer}>
