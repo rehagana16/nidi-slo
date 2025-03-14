@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './benefit-card.module.css';
 import React from 'react';
 import { BaseButton } from './base-button';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 interface Props {
   imageUrl: string;
@@ -12,7 +12,6 @@ interface Props {
 }
 
 export const BenefitCard: React.FC<Props> = (props) => {
-  const router = useRouter();
   return(
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
@@ -27,13 +26,11 @@ export const BenefitCard: React.FC<Props> = (props) => {
       <div className={styles.content}>{props.content}</div>
       {
         props.isTerjangkau ? (
-          <BaseButton
-            onClick={() => {
-              router.push('/daftar-harga-nidi-slo');
-            }}
-          >
-            <p>Cek Harga Kami</p>
-          </BaseButton>
+          <Link href="/daftar-harga-nidi-slo">
+            <BaseButton>
+              <p>Cek Harga Kami</p>
+            </BaseButton>
+          </Link>
         ) : null
       }
     </div>

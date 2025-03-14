@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './product-card.module.css'
 import React from 'react';
 import { BaseButton } from './base-button';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 interface Props {
   imageUrl1: string;
@@ -10,10 +10,6 @@ interface Props {
   title: string;
 }
 export const ProductCard: React.FC<Props> = (props) => {
-  const router = useRouter();
-  const handleClick = () => {
-    router.push('/daftar-nidi-slo');
-  }
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
@@ -31,9 +27,11 @@ export const ProductCard: React.FC<Props> = (props) => {
         />
       </div>
       <div className={styles.title}>{props.title}</div>
-      <BaseButton className={styles.button} onClick={handleClick}>
-        <p>Buat Permohonan</p>
-      </BaseButton>
+      <Link href="/daftar-nidi-slo">
+        <BaseButton className={styles.button}>
+          <p>Buat Permohonan</p>
+        </BaseButton>
+      </Link>
     </div>
   )
 }

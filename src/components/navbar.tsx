@@ -1,22 +1,17 @@
 import Image from 'next/image';
 import styles from './navbar.module.css';
-import { useRouter } from 'next/router';
 import { usePathname } from 'next/navigation';
 import mergeStrings from '@/util/mergeClassname';
 import { BaseButton } from './base-button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const router = useRouter();
   const pathname = usePathname();
-  const handleClick = (url: string) => {
-    router.push(url);
-  }
-  const handleClickMobile = (url: string) => {
-    router.push(url);
+  const handleClickMobile = () => {
     setIsOpen(false);
   }
   const handleClickMenuButton = () => {
@@ -33,33 +28,36 @@ export const Navbar = () => {
         />
       </div>
       <div className={styles.menuList}>
-        <div
-          className={mergeStrings(
-            styles.menuButton,
-            pathname === '/' ? styles.activeMenu : ''
-          )}
-          onClick={() => handleClick('/')}
-        >
-          Beranda
-        </div>
-        <div
-          className={mergeStrings(
-            styles.menuButton,
-            pathname === '/daftar-nidi-slo' ? styles.activeMenu : ''
-          )}
-          onClick={() => handleClick('/daftar-nidi-slo')}
-        >
-          Buat Permohonan
-        </div>
-        <div
-          className={mergeStrings(
-            styles.menuButton,
-            pathname === '/daftar-harga-nidi-slo' ? styles.activeMenu : ''
-          )}
-          onClick={() => handleClick('/daftar-harga-nidi-slo')}
-        >
-          Tarif Nidi & Slo
-        </div>
+        <Link style={{color: "white", textDecoration: "none"}} href="/">
+          <div
+            className={mergeStrings(
+              styles.menuButton,
+              pathname === '/' ? styles.activeMenu : ''
+            )}
+          >
+            Beranda
+          </div>
+        </Link>
+        <Link style={{color: "white", textDecoration: "none"}} href="/daftar-nidi-slo">
+          <div
+            className={mergeStrings(
+              styles.menuButton,
+              pathname === '/daftar-nidi-slo' ? styles.activeMenu : ''
+            )}
+          >
+            Buat Permohonan
+          </div>
+        </Link>
+        <Link style={{color: "white", textDecoration: "none"}} href="/daftar-harga-nidi-slo">
+          <div
+            className={mergeStrings(
+              styles.menuButton,
+              pathname === '/daftar-harga-nidi-slo' ? styles.activeMenu : ''
+            )}
+          >
+            Tarif Nidi & Slo
+          </div>
+        </Link>
       </div>
       <div className={styles.menuButtonContainer}>
         <BaseButton
@@ -72,24 +70,30 @@ export const Navbar = () => {
       {
         isOpen && (
           <div className={styles.menuDropdown}>
-            <div
-              className={styles.dropdownMenu}
-              onClick={() => handleClickMobile('/')}
-            >
-              Beranda
-            </div>
-            <div
-              className={styles.dropdownMenu}
-              onClick={() => handleClickMobile('/daftar-nidi-slo')}
-            >
-              Buat Permohonan
-            </div>
-            <div
-              className={styles.dropdownMenu}
-              onClick={() => handleClickMobile('/daftar-harga-nidi-slo')}
-            >
-              Tarif Nidi & Slo
-            </div>
+            <Link style={{color: "white", textDecoration: "none"}} href="/">
+              <div
+                className={styles.dropdownMenu}
+                onClick={() => handleClickMobile()}
+              >
+                Beranda
+              </div>
+            </Link>
+            <Link style={{color: "white", textDecoration: "none"}} href="/daftar-nidi-slo">
+              <div
+                className={styles.dropdownMenu}
+                onClick={() => handleClickMobile()}
+              >
+                Buat Permohonan
+              </div>
+            </Link>
+            <Link style={{color: "white", textDecoration: "none"}} href="/daftar-harga-nidi-slo">
+              <div
+                className={styles.dropdownMenu}
+                onClick={() => handleClickMobile()}
+              >
+                Tarif Nidi & Slo
+              </div>
+            </Link>
           </div>
         )
       }
