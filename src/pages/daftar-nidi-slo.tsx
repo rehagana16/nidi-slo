@@ -159,7 +159,7 @@ const OrderForm: NextPageWithLayout = () => {
   return(
     <>
       <Head>
-        <title>Buat permohonan NIDI SLO Anda</title>
+        <title>Permohonan NIDI SLO Sumatera Utara(Sumut)</title>
 
         {/* Adding custom favicon */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
