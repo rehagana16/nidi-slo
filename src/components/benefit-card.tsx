@@ -17,7 +17,7 @@ export const BenefitCard: React.FC<Props> = (props) => {
       <div className={styles.imageContainer}>
         <Image
           src={props.imageUrl}
-          alt={`nidi-slo-${props.imageUrl}`}
+          alt={`nidi slo ${props.imageUrl}`}
           width={60}
           height={60}
         />

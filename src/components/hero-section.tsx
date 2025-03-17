@@ -10,7 +10,7 @@ export const HeroSection = () => {
       >
         <Image
           src="/hero-image.png"
-          alt="nidi-slo-hero-image"
+          alt="nidi slo hero image"
           fill
           objectFit='contain'
         />

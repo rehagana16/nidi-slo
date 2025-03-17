@@ -22,7 +22,7 @@ export const Navbar = () => {
       <div className={styles.imageContainer}>
         <Image
           src="/logo-esdm.png"
-          alt='header-logo-nidi-slo'
+          alt='header logo nidi slo'
           layout='fill'
           objectFit='contain'
         />

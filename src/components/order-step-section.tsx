@@ -10,7 +10,7 @@ export const OrderStepSection = () => {
       <div className={styles.imageContainer}>
         <Image
           src={"/order-process-diagram.png"}
-          alt="nidi-slo-process-diagram"
+          alt="nidi slo process diagram"
           layout={'fill'}
           objectFit={'contain'}
         />

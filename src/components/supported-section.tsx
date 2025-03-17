@@ -13,7 +13,7 @@ export const SupportedSection = () => {
       <div className={styles.imageContainer}>
         <Image
           src={"/logo-esdm.png"}
-          alt="logo-esdm"
+          alt="nidi slo logo supported"
           layout={'fill'}
           objectFit={'contain'}
         />

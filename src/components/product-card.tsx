@@ -15,13 +15,13 @@ export const ProductCard: React.FC<Props> = (props) => {
       <div className={styles.imageContainer}>
         <Image
           src={props.imageUrl1}
-          alt='card-nidi-slo-logo'
+          alt='nidi slo card logo'
           width={75}
           height={75}
         />
         <Image
           src={props.imageUrl2}
-          alt='card-nidi-slo-logo'
+          alt='nidi slo card logo 2'
           width={75}
           height={75}
         />
